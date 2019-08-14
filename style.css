@@ -1,0 +1,11 @@
+#myCan{
+    border: 1px solid black;
+}
+#canvasout {
+    display: none;
+}
+
+@font-face {
+    font-family: Beyno;
+    src: url(Beyno.otf);
+  }
