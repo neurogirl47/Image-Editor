@@ -1,2 +1,2 @@
-# Image-Editor
-Image editor for adding text to images
+# Nsibidi Image-Editor
+Image editor for adding Nsibidi characters and text to images
