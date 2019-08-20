@@ -9,3 +9,8 @@
     font-family: Beyno;
     src: url(Beyno.otf);
   }
+
+@font-face {
+    font-family: Akagu;
+    src: url(Akagu.ttf) format('truetype');
+}
