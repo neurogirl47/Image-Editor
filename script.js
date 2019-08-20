@@ -43,7 +43,7 @@ function addImage(e){
     fr.onload = function(event){
         var image = new Image();
         image.onload = function(){
-            ctx.drawImage(image, 0, 0);
+            ctx.drawImage(image, 0, 100, 475, 209);
         }
 
         image.src = event.target.result;
@@ -75,8 +75,8 @@ const drawText = function(){
     // normal, italic, bold
     // px pt cm in rem em
     // any installed or imported font
-    ctx.font = 'normal 72px Beyno, Helvetica, Arial, monospace';
-    ctx.fillStyle = 'Black';
+    ctx.font = 'normal 72px Akagu, Beyno, Helvetica, Arial, monospace';
+    ctx.fillStyle = 'White';
     //textAlign center, left, right, end, start
     ctx.textAlign = 'start';
     //textBaseline top, hanging, middle, bottom, ideographic, alphabetic
@@ -85,14 +85,21 @@ const drawText = function(){
     ctx.direction = 'ltr';
 
     let txt = document.getElementById('msg').value;
-    let metrics = ctx.measureText(oldTxt);
-    let w = metrics.width;
-    ctx.clearRect(50, 120, w, -100);
+    //let metrics = ctx.measureText(oldTxt);
+    //let w = metrics.width;
+    ctx.fillStyle = 'Black';
+    ctx.fillRect(0, 0, 475, 100);
+    ctx.fillRect(0, 300, 475, 100);
+    
 
     if( txt == ''){
         txt = 'Add Text.';
     }
-    ctx.fillText(txt, 50, 100);
+    ctx.fillStyle = 'White';
+    ctx.font = 'normal 45px Akagu, Beyno, Helvetica, Arial, monospace';
+    ctx.fillText(txt, 50, 350);
+    ctx.font = '30px Helvetica, Arial, monospace';
+    ctx.fillText(txt, 100, 385);
     oldTxt = txt;
 
 
